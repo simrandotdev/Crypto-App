@@ -20,6 +20,7 @@
 		3D83D92D28F28BC800DB4114 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D83D92C28F28BC800DB4114 /* UIApplication.swift */; };
 		3D83D93428F49BA900DB4114 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D83D93328F49BA900DB4114 /* HomeView.swift */; };
 		3D83D93828F49CAE00DB4114 /* CircleButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D83D93728F49CAE00DB4114 /* CircleButtonView.swift */; };
+		3D83D93D28F4A39A00DB4114 /* CoinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D83D93C28F4A39A00DB4114 /* CoinModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		3D83D92C28F28BC800DB4114 /* UIApplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
 		3D83D93328F49BA900DB4114 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		3D83D93728F49CAE00DB4114 /* CircleButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonView.swift; sourceTree = "<group>"; };
+		3D83D93C28F4A39A00DB4114 /* CoinModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				3D83D92F28F49B4D00DB4114 /* Configs */,
 				3D83D92E28F49AE800DB4114 /* Core */,
 				3D83D92328F28BAE00DB4114 /* Extensions */,
+				3D83D93B28F4A38900DB4114 /* Models */,
 				3D83D91128F289B800DB4114 /* ContentView.swift */,
 				3D83D91828F289B900DB4114 /* Persistence.swift */,
 				3D83D91A28F289B900DB4114 /* Crypto_App.xcdatamodeld */,
@@ -160,6 +163,14 @@
 			path = CircleButton;
 			sourceTree = "<group>";
 		};
+		3D83D93B28F4A38900DB4114 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3D83D93C28F4A39A00DB4114 /* CoinModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -234,6 +245,7 @@
 				3D83D91C28F289B900DB4114 /* Crypto_App.xcdatamodeld in Sources */,
 				3D83D92728F28BBA00DB4114 /* Date.swift in Sources */,
 				3D83D93428F49BA900DB4114 /* HomeView.swift in Sources */,
+				3D83D93D28F4A39A00DB4114 /* CoinModel.swift in Sources */,
 				3D83D91928F289B900DB4114 /* Persistence.swift in Sources */,
 				3D83D91228F289B800DB4114 /* ContentView.swift in Sources */,
 				3D83D91028F289B800DB4114 /* CryptoApp.swift in Sources */,
