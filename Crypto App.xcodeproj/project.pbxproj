@@ -50,7 +50,7 @@
 		3D83D90328F289B800DB4114 = {
 			isa = PBXGroup;
 			children = (
-				3D83D90E28F289B800DB4114 /* Crypto App */,
+				3D83D90E28F289B800DB4114 /* App */,
 				3D83D90D28F289B800DB4114 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -63,19 +63,18 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3D83D90E28F289B800DB4114 /* Crypto App */ = {
+		3D83D90E28F289B800DB4114 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				3D83D92F28F49B4D00DB4114 /* Configs */,
+				3D83D92E28F49AE800DB4114 /* Core */,
 				3D83D92328F28BAE00DB4114 /* Extensions */,
-				3D83D90F28F289B800DB4114 /* Crypto_AppApp.swift */,
 				3D83D91128F289B800DB4114 /* ContentView.swift */,
-				3D83D91328F289B900DB4114 /* Assets.xcassets */,
 				3D83D91828F289B900DB4114 /* Persistence.swift */,
-				3D83D91D28F289B900DB4114 /* Info.plist */,
 				3D83D91A28F289B900DB4114 /* Crypto_App.xcdatamodeld */,
 				3D83D91528F289B900DB4114 /* Preview Content */,
 			);
-			path = "Crypto App";
+			path = App;
 			sourceTree = "<group>";
 		};
 		3D83D91528F289B900DB4114 /* Preview Content */ = {
@@ -96,6 +95,47 @@
 				3D83D92C28F28BC800DB4114 /* UIApplication.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3D83D92E28F49AE800DB4114 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				3D83D93028F49B7400DB4114 /* Home */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		3D83D92F28F49B4D00DB4114 /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				3D83D90F28F289B800DB4114 /* Crypto_AppApp.swift */,
+				3D83D91328F289B900DB4114 /* Assets.xcassets */,
+				3D83D91D28F289B900DB4114 /* Info.plist */,
+			);
+			path = Configs;
+			sourceTree = "<group>";
+		};
+		3D83D93028F49B7400DB4114 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				3D83D93228F49B8900DB4114 /* ViewModels */,
+				3D83D93128F49B7C00DB4114 /* Views */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		3D83D93128F49B7C00DB4114 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3D83D93228F49B8900DB4114 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,7 +344,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Crypto App/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"App/Preview Content\"";
 				DEVELOPMENT_TEAM = 8J72S889CZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -337,7 +377,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Crypto App/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"App/Preview Content\"";
 				DEVELOPMENT_TEAM = 8J72S889CZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
