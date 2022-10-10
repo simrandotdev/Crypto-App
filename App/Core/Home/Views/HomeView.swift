@@ -17,25 +17,7 @@ struct HomeView: View {
                 .ignoresSafeArea()
             
             VStack {
-                HStack {
-                    CircleButtonView(iconName: showPortfolio ? "plus" : "info")
-                        .animation(nil, value: showPortfolio)
-                    Spacer()
-                    Text(showPortfolio ? "Portfolio" : "Live Prices")
-                        .font(.headline)
-                        .fontWeight(.heavy)
-                        .foregroundColor(Color.theme.accent)
-                        .animation(nil, value: showPortfolio)
-                    Spacer()
-                    CircleButtonView(iconName: "chevron.right")
-                        .rotationEffect(Angle(degrees: showPortfolio ? 180 : 0))
-                        .onTapGesture {
-                            withAnimation(.spring()) {
-                                showPortfolio.toggle()
-                            }
-                        }
-                }
-                .padding()
+                HomeHeaderView()
                 
                 Spacer()
             }
@@ -50,4 +32,31 @@ struct HomeView_Previews: PreviewProvider {
                 .toolbar(.hidden)
         }
     }
+}
+
+
+private extension HomeView {
+    
+    @ViewBuilder func HomeHeaderView() -> some View {
+        HStack {
+            CircleButtonView(iconName: showPortfolio ? "plus" : "info")
+                .animation(nil, value: showPortfolio)
+            Spacer()
+            Text(showPortfolio ? "Portfolio" : "Live Prices")
+                .font(.headline)
+                .fontWeight(.heavy)
+                .foregroundColor(Color.theme.accent)
+                .animation(nil, value: showPortfolio)
+            Spacer()
+            CircleButtonView(iconName: "chevron.right")
+                .rotationEffect(Angle(degrees: showPortfolio ? 180 : 0))
+                .onTapGesture {
+                    withAnimation(.spring()) {
+                        showPortfolio.toggle()
+                    }
+                }
+        }
+        .padding()
+    }
+    
 }
