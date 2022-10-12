@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3D46106328F7021600DF7416 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D46106228F7021600DF7416 /* HomeViewModel.swift */; };
+		3D46106628F707F000DF7416 /* CoinDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D46106528F707F000DF7416 /* CoinDataService.swift */; };
 		3D83D91028F289B800DB4114 /* CryptoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D83D90F28F289B800DB4114 /* CryptoApp.swift */; };
 		3D83D91228F289B800DB4114 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D83D91128F289B800DB4114 /* ContentView.swift */; };
 		3D83D91428F289B900DB4114 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D83D91328F289B900DB4114 /* Assets.xcassets */; };
@@ -29,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		3D46106228F7021600DF7416 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		3D46106528F707F000DF7416 /* CoinDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDataService.swift; sourceTree = "<group>"; };
 		3D83D90C28F289B800DB4114 /* Crypto App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Crypto App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D83D90F28F289B800DB4114 /* CryptoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoApp.swift; sourceTree = "<group>"; };
 		3D83D91128F289B800DB4114 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -61,6 +63,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D46106428F707BE00DF7416 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				3D46106528F707F000DF7416 /* CoinDataService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		3D83D90328F289B800DB4114 = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +90,7 @@
 		3D83D90E28F289B800DB4114 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				3D46106428F707BE00DF7416 /* Services */,
 				3D83D92F28F49B4D00DB4114 /* Configs */,
 				3D83D92E28F49AE800DB4114 /* Core */,
 				3D83D92328F28BAE00DB4114 /* Extensions */,
@@ -262,6 +273,7 @@
 				3D83D93428F49BA900DB4114 /* HomeView.swift in Sources */,
 				3D83D94128F4BF5F00DB4114 /* PreviewProvider.swift in Sources */,
 				3D83D93D28F4A39A00DB4114 /* CoinModel.swift in Sources */,
+				3D46106628F707F000DF7416 /* CoinDataService.swift in Sources */,
 				3D83D91928F289B900DB4114 /* Persistence.swift in Sources */,
 				3D83D91228F289B800DB4114 /* ContentView.swift in Sources */,
 				3D83D91028F289B800DB4114 /* CryptoApp.swift in Sources */,
