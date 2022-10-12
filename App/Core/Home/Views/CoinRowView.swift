@@ -36,8 +36,10 @@ struct CoinRowView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             CoinRowView(dev.coin, showHoldingColumn: true)
+                .previewLayout(.sizeThatFits)
             
             CoinRowView(dev.coin, showHoldingColumn: true)
+                .previewLayout(.sizeThatFits)
                 .preferredColorScheme(.dark)
         }
     }

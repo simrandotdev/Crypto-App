@@ -10,6 +10,7 @@ import SwiftUI
 struct HomeView: View {
     
     @State private var showPortfolio: Bool = false
+    @EnvironmentObject private var vm: HomeViewModel
     
     var body: some View {
         ZStack {
@@ -19,6 +20,16 @@ struct HomeView: View {
             VStack {
                 HomeHeaderView()
                 
+                
+                ColumnTitles()
+                
+                if !showPortfolio {
+                    AllCoinsList()
+                        .transition(.move(edge: .leading))
+                } else {
+                    PortfolioCoinsList()
+                        .transition(.move(edge: .trailing))
+                }
                 Spacer()
             }
         }
@@ -30,12 +41,53 @@ struct HomeView_Previews: PreviewProvider {
         NavigationView {
             HomeView()
                 .toolbar(.hidden)
+                .environmentObject(dev.homeViewModel)
         }
     }
 }
 
 
+// MARK: - ViewBuilders
+
 private extension HomeView {
+    
+    
+    @ViewBuilder func ColumnTitles() -> some View {
+        
+        HStack {
+            Text("Coin")
+            Spacer()
+            if showPortfolio {
+                Text("Holdings")
+            }
+            Text("Price")
+                .frame(width: UIScreen.main.bounds.width / 3)
+        }
+        .font(.caption)
+        .foregroundColor(.theme.secondaryText)
+        .padding(.horizontal)
+    }
+    
+    @ViewBuilder func AllCoinsList() -> some View {
+        List {
+            ForEach(vm.allCoins) { coin in
+                CoinRowView(coin)
+                    .listRowInsets(.init(top: 0, leading: 10, bottom: 0, trailing: 10))
+            }
+        }
+        .listStyle(.plain)
+    }
+    
+    @ViewBuilder func PortfolioCoinsList() -> some View {
+        List {
+            ForEach(vm.portfolioCoins) { coin in
+                CoinRowView(coin, showHoldingColumn: true)
+                    .listRowInsets(.init(top: 0, leading: 10, bottom: 0, trailing: 10))
+            }
+        }
+        .listStyle(.plain)
+    }
+    
     
     @ViewBuilder func HomeHeaderView() -> some View {
         HStack {

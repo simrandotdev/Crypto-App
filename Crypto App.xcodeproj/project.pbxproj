@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D46106328F7021600DF7416 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D46106228F7021600DF7416 /* HomeViewModel.swift */; };
 		3D83D91028F289B800DB4114 /* CryptoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D83D90F28F289B800DB4114 /* CryptoApp.swift */; };
 		3D83D91228F289B800DB4114 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D83D91128F289B800DB4114 /* ContentView.swift */; };
 		3D83D91428F289B900DB4114 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D83D91328F289B900DB4114 /* Assets.xcassets */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3D46106228F7021600DF7416 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		3D83D90C28F289B800DB4114 /* Crypto App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Crypto App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D83D90F28F289B800DB4114 /* CryptoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoApp.swift; sourceTree = "<group>"; };
 		3D83D91128F289B800DB4114 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 		3D83D93228F49B8900DB4114 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				3D46106228F7021600DF7416 /* HomeViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 				3D83D92D28F28BC800DB4114 /* UIApplication.swift in Sources */,
 				3D83D93F28F4BF0100DB4114 /* CoinRowView.swift in Sources */,
 				3D83D94328F4C52900DB4114 /* View.swift in Sources */,
+				3D46106328F7021600DF7416 /* HomeViewModel.swift in Sources */,
 				3D83D91C28F289B900DB4114 /* Crypto_App.xcdatamodeld in Sources */,
 				3D83D92728F28BBA00DB4114 /* Date.swift in Sources */,
 				3D83D93428F49BA900DB4114 /* HomeView.swift in Sources */,

@@ -10,7 +10,6 @@ import SwiftUI
 
 extension View {
     
-    
     func debugBackground(_ color: Color) -> some View{
         #if DEBUG
         return background(color)
