@@ -74,13 +74,14 @@ private extension CoinRowView {
                 .minimumScaleFactor(0.75)
         }
         .foregroundColor(.theme.accent)
+        
     }
     
     func currencyAndPriceChangeColumnView() -> some View {
         return VStack(alignment: .trailing) {
             Text("\(coinModel.currentPrice.asCurrencyWith2Decimals())")
                 .minimumScaleFactor(0.75)
-                .bold()
+                .font(.body.bold())
                 .foregroundColor(.theme.accent)
             Text("\( (coinModel.priceChangePercentage24H ?? 0).asPercentString())")
                 .minimumScaleFactor(0.75)
