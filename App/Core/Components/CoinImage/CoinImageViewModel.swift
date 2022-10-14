@@ -21,7 +21,7 @@ class CoinImageViewModel: ObservableObject {
     init(coin: CoinModel) {
         self.coin = coin
         self.cancellable = Set()
-        self.coinImageService = CoinImageService(urlString: coin.image)
+        self.coinImageService = CoinImageService(coin: coin)
         self.isLoading = true
         self.addSubscribers()
     }
