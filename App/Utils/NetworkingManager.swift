@@ -15,12 +15,11 @@ class NetworkingManager {
     
     private init() { }
     
-    func download<T: Decodable>(url: URL) -> AnyPublisher<T, Error> {
+    func download(url: URL) -> AnyPublisher<Data, Error> {
         return URLSession.shared.dataTaskPublisher(for: url)
             .subscribe(on: DispatchQueue.global(qos: .default))
             .tryMap({ try self.handleURLResponse(output: $0, url: url) })
             .receive(on: DispatchQueue.main)
-            .decode(type: T.self, decoder: JSONDecoder())
             .eraseToAnyPublisher()
     }
     

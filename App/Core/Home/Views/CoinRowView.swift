@@ -54,7 +54,7 @@ private extension CoinRowView {
                 .minimumScaleFactor(0.75)
                 .foregroundColor(.theme.secondaryText)
                 .frame(minWidth: 30)
-            Circle()
+            CoinImageView(coin: coinModel)
                 .frame(width: 30, height: 30)
             Text(coinModel.symbol.uppercased())
                 .font(.headline)

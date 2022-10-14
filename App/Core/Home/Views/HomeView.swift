@@ -20,7 +20,6 @@ struct HomeView: View {
             VStack {
                 HomeHeaderView()
                 
-                
                 ColumnTitles()
                 
                 if !showPortfolio {
