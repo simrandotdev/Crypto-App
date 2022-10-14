@@ -20,8 +20,6 @@ struct HomeView: View {
             VStack {
                 HomeHeaderView()
                 
-                ColumnTitles()
-                
                 if !showPortfolio {
                     AllCoinsList()
                         .transition(.move(edge: .leading))
@@ -69,16 +67,24 @@ private extension HomeView {
     
     @ViewBuilder func AllCoinsList() -> some View {
         List {
+            SearchBarView(searchText: $vm.allCoinSearchText)
+            ColumnTitles()
+                .listRowSeparator(.hidden)
+            
             ForEach(vm.allCoins) { coin in
                 CoinRowView(coin)
                     .listRowInsets(.init(top: 16, leading: 0, bottom: 16, trailing: 0))
             }
         }
         .listStyle(.plain)
+        
     }
     
     @ViewBuilder func PortfolioCoinsList() -> some View {
         List {
+            ColumnTitles()
+                .listRowSeparator(.hidden)
+            
             ForEach(vm.portfolioCoins) { coin in
                 CoinRowView(coin, showHoldingColumn: true)
                     .listRowInsets(.init(top: 16, leading: 0, bottom: 16, trailing: 0))
