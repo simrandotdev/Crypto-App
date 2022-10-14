@@ -56,11 +56,17 @@ private extension CoinRowView {
                 .frame(minWidth: 30)
             CoinImageView(coin: coinModel)
                 .frame(width: 30, height: 30)
-            Text(coinModel.symbol.uppercased())
-                .font(.headline)
-                .minimumScaleFactor(0.75)
-                .padding(.leading, 6)
-                .foregroundColor(.theme.accent)
+            VStack(alignment: .leading) {
+                Text(coinModel.symbol.uppercased())
+                    .font(.headline)
+                    .minimumScaleFactor(0.75)
+                    .foregroundColor(.theme.accent)
+                Text(coinModel.name)
+                    .font(.footnote)
+                    .minimumScaleFactor(0.75)
+                    .foregroundColor(.theme.secondaryText)
+            }
+            .padding(.leading, 6)
             
             Spacer()
         }

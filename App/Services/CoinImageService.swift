@@ -26,7 +26,6 @@ class CoinImageService {
     private func getCoingImage() {
         
         if let savedImage = LocalFileManager.instance.getImage(imageName: coin.id, folderName: folderName) {
-            print("Downloaded from FileManager: ")
             image = savedImage
             return
         }
@@ -40,7 +39,7 @@ class CoinImageService {
                 return UIImage(data: data)
             }
             .sink(receiveCompletion: NetworkingManager.shared.handleCompletion(completion:)) { [weak self] returnedImage in
-                print("Downloaded from Internet: ", url.path)
+
                 guard let downloadedImage = returnedImage,
                 let coin = self?.coin,
                 let folderName = self?.folderName else { return }
