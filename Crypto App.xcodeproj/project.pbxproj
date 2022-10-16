@@ -32,6 +32,9 @@
 		3D83D93F28F4BF0100DB4114 /* CoinRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D83D93E28F4BF0100DB4114 /* CoinRowView.swift */; };
 		3D83D94128F4BF5F00DB4114 /* PreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D83D94028F4BF5F00DB4114 /* PreviewProvider.swift */; };
 		3D83D94328F4C52900DB4114 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D83D94228F4C52900DB4114 /* View.swift */; };
+		3DB65B7028FCB3B0005D187E /* StatisticModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB65B6F28FCB3B0005D187E /* StatisticModel.swift */; };
+		3DB65B7228FCB50D005D187E /* StatisticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB65B7128FCB50D005D187E /* StatisticView.swift */; };
+		3DB65B7428FCB7C5005D187E /* HomeStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB65B7328FCB7C4005D187E /* HomeStatsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +65,9 @@
 		3D83D93E28F4BF0100DB4114 /* CoinRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinRowView.swift; sourceTree = "<group>"; };
 		3D83D94028F4BF5F00DB4114 /* PreviewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProvider.swift; sourceTree = "<group>"; };
 		3D83D94228F4C52900DB4114 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		3DB65B6F28FCB3B0005D187E /* StatisticModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticModel.swift; sourceTree = "<group>"; };
+		3DB65B7128FCB50D005D187E /* StatisticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticView.swift; sourceTree = "<group>"; };
+		3DB65B7328FCB7C4005D187E /* HomeStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStatsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				3D83D93328F49BA900DB4114 /* HomeView.swift */,
+				3DB65B7328FCB7C4005D187E /* HomeStatsView.swift */,
 				3D83D93E28F4BF0100DB4114 /* CoinRowView.swift */,
 			);
 			path = Views;
@@ -208,6 +215,7 @@
 				3D61A08228F9AFC700E94AAC /* CoinImage */,
 				3D83D93628F49C9F00DB4114 /* CircleButton */,
 				3D61A08B28F9C73000E94AAC /* SearchBarView.swift */,
+				3DB65B7128FCB50D005D187E /* StatisticView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -224,6 +232,7 @@
 			isa = PBXGroup;
 			children = (
 				3D83D93C28F4A39A00DB4114 /* CoinModel.swift */,
+				3DB65B6F28FCB3B0005D187E /* StatisticModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -301,6 +310,7 @@
 				3D83D92D28F28BC800DB4114 /* UIApplication.swift in Sources */,
 				3D61A08A28F9B9FE00E94AAC /* LocalFileManager.swift in Sources */,
 				3D83D93F28F4BF0100DB4114 /* CoinRowView.swift in Sources */,
+				3DB65B7428FCB7C5005D187E /* HomeStatsView.swift in Sources */,
 				3D83D94328F4C52900DB4114 /* View.swift in Sources */,
 				3D61A08828F9B20C00E94AAC /* CoinImageViewModel.swift in Sources */,
 				3D61A08428F9AFD200E94AAC /* CoinImageView.swift in Sources */,
@@ -314,10 +324,12 @@
 				3D83D93D28F4A39A00DB4114 /* CoinModel.swift in Sources */,
 				3D46106628F707F000DF7416 /* CoinDataService.swift in Sources */,
 				3D83D91928F289B900DB4114 /* Persistence.swift in Sources */,
+				3DB65B7028FCB3B0005D187E /* StatisticModel.swift in Sources */,
 				3D83D91228F289B800DB4114 /* ContentView.swift in Sources */,
 				3D83D91028F289B800DB4114 /* CryptoApp.swift in Sources */,
 				3D83D93828F49CAE00DB4114 /* CircleButtonView.swift in Sources */,
 				3D83D92828F28BBA00DB4114 /* Color.swift in Sources */,
+				3DB65B7228FCB50D005D187E /* StatisticView.swift in Sources */,
 				3D83D92B28F28BC400DB4114 /* String.swift in Sources */,
 				3D61A08628F9B0DA00E94AAC /* CoinImageService.swift in Sources */,
 				3D83D92928F28BBA00DB4114 /* Double.swift in Sources */,

@@ -20,6 +20,8 @@ struct HomeView: View {
             VStack {
                 HomeHeaderView()
                 
+                HomeStatsView(showPortfolio: $showPortfolio)
+                
                 if !showPortfolio {
                     AllCoinsList()
                         .transition(.move(edge: .leading))
