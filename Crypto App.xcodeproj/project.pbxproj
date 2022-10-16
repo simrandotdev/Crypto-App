@@ -35,6 +35,8 @@
 		3DB65B7028FCB3B0005D187E /* StatisticModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB65B6F28FCB3B0005D187E /* StatisticModel.swift */; };
 		3DB65B7228FCB50D005D187E /* StatisticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB65B7128FCB50D005D187E /* StatisticView.swift */; };
 		3DB65B7428FCB7C5005D187E /* HomeStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB65B7328FCB7C4005D187E /* HomeStatsView.swift */; };
+		3DB65B7628FCC253005D187E /* MarketDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB65B7528FCC253005D187E /* MarketDataModel.swift */; };
+		3DB65B7828FCC6B0005D187E /* MarketDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB65B7728FCC6B0005D187E /* MarketDataService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +70,8 @@
 		3DB65B6F28FCB3B0005D187E /* StatisticModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticModel.swift; sourceTree = "<group>"; };
 		3DB65B7128FCB50D005D187E /* StatisticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticView.swift; sourceTree = "<group>"; };
 		3DB65B7328FCB7C4005D187E /* HomeStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStatsView.swift; sourceTree = "<group>"; };
+		3DB65B7528FCC253005D187E /* MarketDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketDataModel.swift; sourceTree = "<group>"; };
+		3DB65B7728FCC6B0005D187E /* MarketDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketDataService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,7 @@
 			children = (
 				3D46106528F707F000DF7416 /* CoinDataService.swift */,
 				3D61A08528F9B0DA00E94AAC /* CoinImageService.swift */,
+				3DB65B7728FCC6B0005D187E /* MarketDataService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -233,6 +238,7 @@
 			children = (
 				3D83D93C28F4A39A00DB4114 /* CoinModel.swift */,
 				3DB65B6F28FCB3B0005D187E /* StatisticModel.swift */,
+				3DB65B7528FCC253005D187E /* MarketDataModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -308,9 +314,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D83D92D28F28BC800DB4114 /* UIApplication.swift in Sources */,
+				3DB65B7628FCC253005D187E /* MarketDataModel.swift in Sources */,
 				3D61A08A28F9B9FE00E94AAC /* LocalFileManager.swift in Sources */,
 				3D83D93F28F4BF0100DB4114 /* CoinRowView.swift in Sources */,
 				3DB65B7428FCB7C5005D187E /* HomeStatsView.swift in Sources */,
+				3DB65B7828FCC6B0005D187E /* MarketDataService.swift in Sources */,
 				3D83D94328F4C52900DB4114 /* View.swift in Sources */,
 				3D61A08828F9B20C00E94AAC /* CoinImageViewModel.swift in Sources */,
 				3D61A08428F9AFD200E94AAC /* CoinImageView.swift in Sources */,

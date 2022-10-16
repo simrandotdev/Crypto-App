@@ -22,11 +22,14 @@ final class HomeViewModel: ObservableObject {
     @Published var portfolioCoins: [CoinModel] = []
 
 
-    private let dataService: CoinDataService
+    private let coinDataService: CoinDataService
+    private let marketDataService: MarketDataService
     private var cancellable: Set<AnyCancellable>
     
-    init(dataService: CoinDataService = CoinDataService()) {
-        self.dataService = dataService
+    init(coinDataService: CoinDataService = CoinDataService(),
+         marketDataService: MarketDataService = MarketDataService()) {
+        self.coinDataService = coinDataService
+        self.marketDataService = marketDataService
         self.cancellable = Set()
         
         addSubscribers()
@@ -35,11 +38,19 @@ final class HomeViewModel: ObservableObject {
     private func addSubscribers() {
 
         $allCoinSearchText
-            .combineLatest(dataService.$allCoins)
+            .combineLatest(coinDataService.$allCoins)
             .debounce(for: .seconds(0.5), scheduler: DispatchQueue.main)
             .map(filterCoins)
             .sink { returnedCoins in
                 self.allCoins = returnedCoins
+            }
+            .store(in: &cancellable)
+        
+        marketDataService
+            .$marketData
+            .map(mapGlobalMarketData)
+            .sink { [weak self] mappedStatistics in
+                self?.statistics = mappedStatistics
             }
             .store(in: &cancellable)
     }
@@ -58,5 +69,16 @@ final class HomeViewModel: ObservableObject {
         }
         
         return filteredCoins
+    }
+    
+    private func mapGlobalMarketData(marketDataModel: MarketDataModel?) -> [StatisticModel] {
+        guard let marketDataModel else { return self.statistics }
+        
+        return [
+            StatisticModel(title: "Market Cap", value: marketDataModel.marketCap, percentageChange: marketDataModel.marketCapChangePercentage24HUsd),
+            StatisticModel(title: "24H Volume", value: marketDataModel.volume),
+            StatisticModel(title: "BTC Dominance", value: marketDataModel.btcDominance),
+            StatisticModel(title: "Portfolio Value", value: "$0.00", percentageChange: -1)
+        ]
     }
 }
