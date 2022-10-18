@@ -19,7 +19,7 @@ struct HomeView: View {
                 .ignoresSafeArea()
                 .sheet(isPresented: $showPortfolioView) {
                     PortfolioView()
-//                        .environmentObject(vm)
+                        .environmentObject(vm)
                 }
             
             VStack {
