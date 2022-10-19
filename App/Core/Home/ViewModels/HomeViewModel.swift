@@ -14,6 +14,7 @@ final class HomeViewModel: ObservableObject {
     @Published var allCoins: [CoinModel] = []
     @Published var allCoinSearchText: String = ""
     @Published var portfolioCoins: [CoinModel] = []
+    @Published var isLoading: Bool = false
 
     private let coinDataService: CoinDataService
     private let marketDataService: MarketDataService
@@ -44,15 +45,6 @@ final class HomeViewModel: ObservableObject {
             }
             .store(in: &cancellable)
         
-        marketDataService
-            .$marketData
-            .combineLatest($portfolioCoins)
-            .map(mapGlobalMarketData)
-            .sink { [weak self] mappedStatistics in
-                self?.statistics = mappedStatistics
-            }
-            .store(in: &cancellable)
-        
         $allCoins
             .combineLatest(portfolioDataService.$savedEntitys)
             .map (mapAllCoinsToPorfolioCoins)
@@ -60,10 +52,28 @@ final class HomeViewModel: ObservableObject {
                 self?.portfolioCoins = returnedCoins
             }
             .store(in: &cancellable)
+        
+        marketDataService
+            .$marketData
+            .combineLatest($portfolioCoins)
+            .map(mapGlobalMarketData)
+            .sink { [weak self] mappedStatistics in
+                self?.statistics = mappedStatistics
+                self?.isLoading = false
+            }
+            .store(in: &cancellable)
+        
+        
     }
     
     func updatePortfolio(coin: CoinModel, amount: Double) {
         portfolioDataService.updatePorfolio(coin: coin, amount: amount)
+    }
+    
+    func reloadData() {
+        isLoading = true
+        coinDataService.getCoins()
+        marketDataService.getMarketData()
     }
     
     
