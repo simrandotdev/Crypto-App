@@ -42,6 +42,7 @@
 		3DB65B7A28FD97AF005D187E /* PortfolioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB65B7928FD97AF005D187E /* PortfolioView.swift */; };
 		3DB65B7C28FD992B005D187E /* XMarkButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB65B7B28FD992B005D187E /* XMarkButton.swift */; };
 		3DB65B7E28FD9CD4005D187E /* CoinLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB65B7D28FD9CD4005D187E /* CoinLogoView.swift */; };
+		3DC76A4C2900431D000B23F4 /* HapticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC76A4B2900431D000B23F4 /* HapticsManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +83,7 @@
 		3DB65B7928FD97AF005D187E /* PortfolioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioView.swift; sourceTree = "<group>"; };
 		3DB65B7B28FD992B005D187E /* XMarkButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMarkButton.swift; sourceTree = "<group>"; };
 		3DB65B7D28FD9CD4005D187E /* CoinLogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinLogoView.swift; sourceTree = "<group>"; };
+		3DC76A4B2900431D000B23F4 /* HapticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 			children = (
 				3D61A07F28F8905400E94AAC /* NetworkingManager.swift */,
 				3D61A08928F9B9FE00E94AAC /* LocalFileManager.swift */,
+				3DC76A4B2900431D000B23F4 /* HapticsManager.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -336,6 +339,7 @@
 				3DB65B7428FCB7C5005D187E /* HomeStatsView.swift in Sources */,
 				3DB65B7828FCC6B0005D187E /* MarketDataService.swift in Sources */,
 				3D83D94328F4C52900DB4114 /* View.swift in Sources */,
+				3DC76A4C2900431D000B23F4 /* HapticsManager.swift in Sources */,
 				3D61A08828F9B20C00E94AAC /* CoinImageViewModel.swift in Sources */,
 				3D61A08428F9AFD200E94AAC /* CoinImageView.swift in Sources */,
 				3D61A08C28F9C73000E94AAC /* SearchBarView.swift in Sources */,

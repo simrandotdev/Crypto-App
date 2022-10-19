@@ -64,16 +64,21 @@ private extension HomeView {
             if showPortfolio {
                 Text("Holdings")
             }
-            Text("Price")
-                .frame(width: UIScreen.main.bounds.width / 3)
-            Button {
-                withAnimation(.linear(duration: 2)) {
-                    vm.reloadData()
+            
+            HStack {
+                Spacer()
+                Text("Price")
+                Button {
+                    withAnimation(.linear(duration: 2)) {
+                        vm.reloadData()
+                    }
+                } label: {
+                    Image(systemName: "goforward")
                 }
-            } label: {
-                Image(systemName: "goforward")
+                .rotationEffect(Angle(degrees: vm.isLoading ? 360 : 0), anchor: .center)
+                
             }
-            .rotationEffect(Angle(degrees: vm.isLoading ? 360 : 0), anchor: .center)
+            .frame(width: UIScreen.main.bounds.width / 3)
 
         }
         .font(.caption)
