@@ -29,6 +29,7 @@ struct CoinRowView: View {
             currencyAndPriceChangeColumnView()
         }
         .font(.subheadline)
+        .background(Color.theme.background.opacity(0.001))
     }
 }
 

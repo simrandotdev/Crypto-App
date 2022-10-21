@@ -46,7 +46,16 @@ import Foundation
  }
  */
 
-struct CoinModel: Identifiable, Codable {
+struct CoinModel: Identifiable, Codable, Hashable {
+    
+    static func == (lhs: CoinModel, rhs: CoinModel) -> Bool {
+        return lhs.id == rhs.id
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        
+    }
+    
     
     let id: String
     let symbol: String

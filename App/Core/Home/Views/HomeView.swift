@@ -11,6 +11,8 @@ struct HomeView: View {
     
     @State private var showPortfolio: Bool = false // animate right
     @State private var showPortfolioView: Bool = false // a new sheet
+    @State private var selectedCoin: CoinModel? = nil
+    @State private var showDetailView: Bool = false
     @EnvironmentObject private var vm: HomeViewModel
     
     var body: some View {
@@ -36,17 +38,32 @@ struct HomeView: View {
                 }
                 Spacer()
             }
+            .background {
+                NavigationLink(destination: DetailLoadingView(coin: $selectedCoin), isActive: $showDetailView, label: {EmptyView()})
+            }
         }
     }
 }
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationView {
+        NavigationStack {
             HomeView()
                 .navigationBarHidden(true)
                 .environmentObject(dev.homeViewModel)
         }
+    }
+}
+
+
+// MARK: - Data Operations
+
+
+private extension HomeView {
+    
+    func seque(coin: CoinModel) {
+        selectedCoin = coin
+        showDetailView = true
     }
 }
 
@@ -127,6 +144,9 @@ private extension HomeView {
             ForEach(vm.allCoins) { coin in
                 CoinRowView(coin)
                     .listRowInsets(.init(top: 16, leading: 0, bottom: 16, trailing: 0))
+                    .onTapGesture {
+                        seque(coin: coin)
+                    }
             }
         }
         .listStyle(.plain)
@@ -141,6 +161,9 @@ private extension HomeView {
             ForEach(vm.portfolioCoins) { coin in
                 CoinRowView(coin, showHoldingColumn: true)
                     .listRowInsets(.init(top: 16, leading: 0, bottom: 16, trailing: 0))
+                    .onTapGesture {
+                        seque(coin: coin)
+                    }
             }
         }
         .listStyle(.plain)

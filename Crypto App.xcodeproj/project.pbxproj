@@ -43,6 +43,7 @@
 		3DB65B7C28FD992B005D187E /* XMarkButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB65B7B28FD992B005D187E /* XMarkButton.swift */; };
 		3DB65B7E28FD9CD4005D187E /* CoinLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB65B7D28FD9CD4005D187E /* CoinLogoView.swift */; };
 		3DC76A4C2900431D000B23F4 /* HapticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC76A4B2900431D000B23F4 /* HapticsManager.swift */; };
+		3DDAA9552902DFE0002D19A0 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDAA9542902DFE0002D19A0 /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +85,7 @@
 		3DB65B7B28FD992B005D187E /* XMarkButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMarkButton.swift; sourceTree = "<group>"; };
 		3DB65B7D28FD9CD4005D187E /* CoinLogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinLogoView.swift; sourceTree = "<group>"; };
 		3DC76A4B2900431D000B23F4 /* HapticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsManager.swift; sourceTree = "<group>"; };
+		3DDAA9542902DFE0002D19A0 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +190,7 @@
 			children = (
 				3D83D93528F49C8500DB4114 /* Components */,
 				3D83D93028F49B7400DB4114 /* Home */,
+				3DDAA94F2902DFA4002D19A0 /* Details */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -205,8 +208,8 @@
 		3D83D93028F49B7400DB4114 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				3D83D93228F49B8900DB4114 /* ViewModels */,
 				3D83D93128F49B7C00DB4114 /* Views */,
+				3D83D93228F49B8900DB4114 /* ViewModels */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -259,6 +262,30 @@
 				3DB65B7528FCC253005D187E /* MarketDataModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		3DDAA94F2902DFA4002D19A0 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				3DDAA9502902DFB6002D19A0 /* Views */,
+				3DDAA9512902DFBB002D19A0 /* ViewModels */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		3DDAA9502902DFB6002D19A0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3DDAA9542902DFE0002D19A0 /* DetailView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3DDAA9512902DFBB002D19A0 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,6 +361,7 @@
 				3D83D92D28F28BC800DB4114 /* UIApplication.swift in Sources */,
 				3DB65B7628FCC253005D187E /* MarketDataModel.swift in Sources */,
 				3DB65B7A28FD97AF005D187E /* PortfolioView.swift in Sources */,
+				3DDAA9552902DFE0002D19A0 /* DetailView.swift in Sources */,
 				3D61A08A28F9B9FE00E94AAC /* LocalFileManager.swift in Sources */,
 				3D83D93F28F4BF0100DB4114 /* CoinRowView.swift in Sources */,
 				3DB65B7428FCB7C5005D187E /* HomeStatsView.swift in Sources */,
@@ -502,7 +530,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -536,7 +564,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
